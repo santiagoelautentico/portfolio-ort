@@ -1,0 +1,60 @@
+/* @import "tailwindcss"; */
+html {
+  background-color: #202020;
+  color: #fff;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+:root {
+  --bgColor: #202020;
+  --primary-color: #f9ca0b;
+  --border-color: #888888;
+}
+
+@font-face {
+  font-family: "yaperi";
+  src: url("./assets/fonts/Yapari-Variable-Trial-VF.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "clash-display-regular";
+  src: url("./assets/fonts/ClashDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "clash-display-medium";
+  src: url("./assets/fonts/ClashDisplay-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "clash-display-bold";
+  src: url("./assets/fonts/ClashDisplay-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+h2{
+  font-family: "yaperi", sans-serif;
+  font-size: 2.5rem;
+}
+h4 {
+  font-family: "yaperi", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+p {
+  font-family: "clash-display-regular", sans-serif;
+  font-size: 1rem;
+}
+.mockup-image-device{
+  width: 100%;
+  height: 100%;
+}

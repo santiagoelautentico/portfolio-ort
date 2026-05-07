@@ -1,0 +1,19 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="1920" height="1080" fill="url(#pattern0_2266_1043)"/>
+<defs>
+<pattern id="pattern0_2266_1043" patternUnits="userSpaceOnUse" patternTransform="matrix(1461.24 0 0 1461.24 0 0)" preserveAspectRatio="none" viewBox="0 0 1476 1476" width="1" height="1">
+<g id="pattern0_2266_1043_inner">
+<g clip-path="url(#clip0_2266_1043)">
+<rect width="1476" height="1476" fill="black"/>
+<rect width="1476" height="1476" fill="url(#pattern1_2266_1043)"/>
+</g>
+</g>
+</pattern><pattern id="pattern1_2266_1043" patternContentUnits="objectBoundingBox" width="0.142222" height="0.284444">
+<use xlink:href="#image0_2266_1043" transform="scale(0.00177778)"/>
+</pattern>
+<clipPath id="clip0_2266_1043">
+<rect width="1476" height="1476" fill="white"/>
+</clipPath>
+<image id="image0_2266_1043" width="80" height="160" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAACgAgMAAADm7QMnAAAADFBMVEWIiIixsbGxsbGxsbF0SLUbAAAABHRSTlP/bytS3QghxwAAAEVJREFUeAFjYA3FAA4Mq17tWrcalVhBtOBK7IL/McFf4rUPZYtGLRq1aNSiUYtGLSJcoYzWR4PBolGLRi0atWjUotH6CAA67a9q5+gpSAAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
