@@ -11,7 +11,7 @@ const worksData = [
     title: "Veritas",
     device: "App",
     icon: "./veritas.svg",
-    description: "Veritas es una red social especializada en noticias de primera mano.",
+    description: "Veritas es una red social especializada en noticias de primera mano, publicadas exclusivamente por cuentas verificadas.",
     proyectFor: "Proyecto de la ORT",
     technologies: ["react", "js", "mysql"],
   },
@@ -34,37 +34,39 @@ const worksData = [
     technologies: ["html", "css", "js"],
   },
 ];
-
 export default function Works() {
   const sliderRef = useRef(null);
   const animating = useRef(false);
+
+  const moveCard = useCallback(() => {
+    const slider = sliderRef.current;
+    const lastItem = slider.querySelector(".item:last-child");
+    if (!lastItem) return null;
+
+    const newItem = document.createElement("div");
+    newItem.className = lastItem.className;
+    newItem.innerHTML = lastItem.innerHTML; // copiar el contenido completo
+    slider.insertBefore(newItem, slider.firstChild);
+    lastItem.style.display = "none";
+    return lastItem;
+  }, []);
 
   const handleClick = useCallback(() => {
     if (animating.current) return;
     animating.current = true;
 
     const slider = sliderRef.current;
-    const lastItem = slider.querySelector(".card-work-container:last-child");
-    if (!lastItem) return;
+    const state = Flip.getState(".item");
+    const removed = moveCard();
 
-    // 1. Capturar estado actual
-    const state = Flip.getState(".card-work-container");
-
-    // 2. Clonar la última carta y ponerla al frente
-    const clone = lastItem.cloneNode(true);
-    slider.insertBefore(clone, slider.firstChild);
-    lastItem.style.display = "none";
-
-    // 3. Animar desde el estado anterior al nuevo
     Flip.from(state, {
-      targets: ".card-work-container",
+      targets: ".item",
       ease: "sine.inOut",
-      duration: 0.6,
       absolute: true,
       onEnter: (elements) =>
         gsap.from(elements, {
-          duration: 0.5,
-          yPercent: 30,
+          duration: 0.3,
+          yPercent: 1,
           opacity: 0,
           ease: "expo.out",
         }),
@@ -73,15 +75,12 @@ export default function Works() {
           duration: 0.3,
           yPercent: 5,
           xPercent: -5,
-          transformOrigin: "bottom left",
+          transformOrigin: "bottom center",
           opacity: 0,
           ease: "expo.out",
           onComplete() {
-            // Limpiar nodos del DOM que ya no se ven
-            if (lastItem.parentNode) slider.removeChild(lastItem);
-            elements.forEach((el) => {
-              if (el.parentNode) el.parentNode.removeChild(el);
-            });
+            if (removed?.parentNode) slider.removeChild(removed);
+            elements.forEach((el) => el.parentNode?.removeChild(el));
             animating.current = false;
           },
         }),
