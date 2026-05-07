@@ -41,7 +41,8 @@ a {
 }
 h2{
   font-family: "yaperi", sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin: 0;
 }
 h4 {
   font-family: "yaperi", sans-serif;
@@ -57,4 +58,10 @@ p {
 .mockup-image-device{
   width: 100%;
   height: 100%;
+}
+span{
+  font-family: "yaperi";
+  font-size: 1.2rem;
+  font-weight: 400;
+
 }

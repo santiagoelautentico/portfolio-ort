@@ -47,41 +47,119 @@
   border-radius: 25px;
   border: 1px solid var(--border-color);
 }
-.works-container {
+#smooth-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+#smooth-content {
+  will-change: transform;
+}
+.container-cards {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  height: 55vh;
-  top: 20vh;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10+ y Edge */
-  user-select: none;
+  flex-direction: column;
 }
-.card-work-container {
-  position: absolute;
+.spacer {
+  height: 80vh;
+}
+.card {
+  height: 65vh;
+  width: 65vw;
+  margin-bottom: 75vh;
+  border-radius: 25px;
+  border: 4px solid black;
   display: flex;
-  border-radius: 15px;
-  padding: 1rem;
-  border: 5px solid #000000;
+  padding: 2rem;
+  overflow: hidden;
   gap: 2rem;
-  transform: translateX(-50%);
-  left: 50%;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-
-.card-work-container::before {
+.card::before{
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("/public/textureCard.jpg");
-  background-size: cover;
-  background-position: center;
   top: 0;
   left: 0;
-  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  background-image: url("/textureCard.jpg");
   mix-blend-mode: multiply;
+}
+.mockup-bg {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/bgPortfolio.svg");
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  border: 4px solid black;
+  box-shadow: inset 0 0 50px #000000;
+}
+.mockup-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2020203f;
+  mix-blend-mode: multiply;
+}
+.content-container {
+  width: 65%;
+  padding-block: 2rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Veritas-mockup {
+  width: 95%;
+  z-index: 1;
+}
+.Overview-mockup {
+  width: 125%;
+  border-radius: 25px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.title-card {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.content-techologies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-work-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  justify-content: space-between;
+}
+.card-work-technologies > li {
+  z-index: 1;
+  background-color: var(--primary-color);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
 }
 .Veritas {
   background-image: linear-gradient(145deg, #0f4c81 0%, #002341 100%);
@@ -91,69 +169,4 @@
 }
 .Upper90 {
   background-image: linear-gradient(145deg, #3002ff -25%, #7f009e 100%);
-}
-
-.slider {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  perspective: 100px;
-  top: 30vh;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.item {
-  position: absolute;
-  width: 65%;
-  height: 100%;
-  border-radius: 25px;
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  border: 5px solid #000000;
-}
-.item:nth-child(5) {
-  left: 0;
-  top: 0;
-}
-.item:nth-child(4) {
-  top: -20px;
-}
-.item:nth-child(3) {
-  top: -40px;
-  opacity: 1;
-}
-.item:nth-child(2) {
-  top: -60px;
-  opacity: 0.7;
-}
-.item:nth-child(1) {
-  top: -80px;
-  opacity: 0.5;
-}
-.mockup-image-container {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("./bgPortfolio.svg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-}
-.mockup-image-device {
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  background-color: #11111197;
-  border-radius: 15px;
-  border: 4px solid black outside;
-  box-shadow: inset 0 0 50px #000000;
-}
-.card-work-content {
-  width: 70%;
-}
-.card-work-header-container {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: space-between;
 }
