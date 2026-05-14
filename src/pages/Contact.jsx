@@ -31,7 +31,7 @@ export default function Contact() {
               <p>Sigueme en Behance para ver más proyectos</p>
               <div className="label-contact">
                 <FaBehanceSquare color="#202020" />
-                <span>s.urbinazeballos@gmail.com</span>
+                <span>behance.net/santiagourbina</span>
               </div>
             </li>
           </ul>
