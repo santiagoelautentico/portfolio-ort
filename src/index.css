@@ -5,6 +5,15 @@ html {
 }
 ul {
   list-style: none;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -14,6 +23,9 @@ a {
   --bgColor: #202020;
   --primary-color: #f9ca0b;
   --border-color: #888888;
+  --mobile: 768px;
+  --tablet: 1024px;
+  --desktop: 1280px;
 }
 
 @font-face {
@@ -39,7 +51,7 @@ a {
   font-weight: bold;
   font-style: normal;
 }
-h2{
+h2 {
   font-family: "yaperi", sans-serif;
   font-size: 3rem;
   margin: 0;
@@ -55,13 +67,25 @@ p {
   font-family: "clash-display-regular", sans-serif;
   font-size: 1rem;
 }
-.mockup-image-device{
+.mockup-image-device {
   width: 100%;
   height: 100%;
 }
-span{
+span {
   font-family: "yaperi";
   font-size: 1.2rem;
   font-weight: 400;
-
+}
+h1 {
+  font-family: "yaperi", sans-serif;
+}
+hr {
+  width: 100%;
+  border: 1px solid var(--border-color);
+}
+p{
+  margin: 0;
+}
+strong{
+  font-family: "clash-display-bold";
 }

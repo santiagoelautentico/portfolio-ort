@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
+import { WORKS } from "../works";
+
 export default function CardWork({
+  id,
   index,
   title,
   device,
@@ -8,41 +12,26 @@ export default function CardWork({
   technologies,
 }) {
   return (
-    <article className={`card ${title}`}>
-      <div className="mockup-bg">
-        <img
-          src={`/${title}-mockup.png`}
-          className={`${title}-mockup img-mockup`}
-          alt={title}
-        />
-      </div>
-      <div className="content-container">
-        <div className="header-container">
-          <h2 className="title-card">
-            {title} <span>{device}</span>
-          </h2>
-          <img src={icon} className="icon-card" alt={`${title} icon`} />
-        </div>
-        <div className="description-container">
-          <h4>Detalles</h4>
-          <p>{description}</p>
-        </div>
-        <div className="card-work-technologies-container">
-          <h4>Tecnologías</h4>
-          <div className="content-techologies">
-            <ul className="card-work-technologies">
-              {technologies.map((tech, index) => (
-                <li key={index}>
-                  <img src={`/${tech}Icon.svg`} alt={`${tech} Icon`} />
-                </li>
-              ))}
-            </ul>
-            <div className="card-work-proyect-for">
-              <p>{proyectFor}</p>
-            </div>
+    <Link to={`/work/${id}`} className="card-work">
+      <div className="wallet-container">
+        <div className="wallet-content">
+          <h2 className="title-wallet">{title}</h2>
+          <hr className="hr-wallet" />
+          <p className="description-wallet">{description}</p>
+          <div>
+            {/* {WORKS.map((tech) 0>)} */}
           </div>
         </div>
       </div>
-    </article>
+      <div className={`${title}-background-mockup background-mockup`} />
+      <div className={`mockup-wallet-container ${title}-mockup-card`}>
+        <img
+          src={`${title}/1mockup.png`}
+          className="mockup-wallet"
+          alt={`${title}-mockup`}
+        />
+      </div>
+      <div className="blur" />
+    </Link>
   );
 }
