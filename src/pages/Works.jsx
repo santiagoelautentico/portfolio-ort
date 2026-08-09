@@ -1,7 +1,7 @@
 import { WORKS } from "../works.js";
 import SelectWorkCard from "../components/SelectWorkCard.jsx";
 import { useState } from "react";
-import InfoWorkContainer from "../components/infoWorkContainer.jsx";
+import InfoWorkContainer from "../components/InfoWorkContainer.jsx";
 import { AnimatePresence } from "motion/react"; // 👈 1. nuevo import
 
 export default function Works() {
