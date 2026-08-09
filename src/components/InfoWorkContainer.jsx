@@ -6,6 +6,8 @@ export default function InfoWorkContainer({ works }) {
   const selectedWork = WORKS.find((item) => item.id === works?.id);
   const projectLink = selectedWork?.link || "#";
 
+  //
+
   return (
     <motion.article
       className="info-work-container-article"
