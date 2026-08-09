@@ -1,7 +1,20 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, OrbitControls } from "@react-three/drei";
-import * as THREE from "three";
+
+function useIsMobile(breakpoint = 700) {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < breakpoint : false
+  );
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < breakpoint);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [breakpoint]);
+
+  return isMobile;
+}
 
 function Modelo({ url }) {
   const { scene } = useGLTF(url);
@@ -9,7 +22,8 @@ function Modelo({ url }) {
 
   useEffect(() => {
     if (ref.current) {
-      ref.current.rotation.set(-Math.PI / 2, Math.PI, Math.PI); // opción 3  // opción 2
+      // Rotación base FIJA: la que mostraba la cara principal. No se toca nunca.
+      ref.current.rotation.set(-Math.PI / 2, Math.PI, Math.PI);
     }
   }, [scene]);
 
@@ -17,14 +31,21 @@ function Modelo({ url }) {
 }
 
 export default function Modelo3D() {
+  const isMobile = useIsMobile();
+
   return (
     <Canvas
-      style={{ width: "100%", height: "100vh" }}
-      camera={{ position: [0, 0, 5], fov: 60 }}
+      style={{ width: "100vw", height: "100vh" }}
+      camera={{ position: [0, 0, isMobile ? 8 : 5], fov: 60 }}
     >
       <ambientLight intensity={1.5} />
       <directionalLight position={[2, 2, 2]} intensity={0.5} />
-      <Modelo url="/driverlicence.glb" />
+
+      {/* Este group rota en el eje de la CÁMARA (mundo), no en el eje local del objeto */}
+      <group rotation={[0, 0, isMobile ? Math.PI / 2 : 0]}>
+        <Modelo url="/driverlicence.glb" />
+      </group>
+
       <OrbitControls />
     </Canvas>
   );

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -10,15 +10,31 @@ import Navbar from "./components/Navbar";
 import BackgroundBorder from "./components/Background";
 import { WORKS } from "./works.js";
 import { useLocation } from "react-router-dom";
+import NavbarMobile from "./components/NavbarMobile.jsx";
 
 function AppContent() {
   const location = useLocation();
   const isDetail = location.pathname.startsWith("/work/");
 
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   return (
     <>
       {!isDetail && <BackgroundBorder />}
-      <Navbar />
+      {!isMobile ? <Navbar /> : <NavbarMobile />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

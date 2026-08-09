@@ -3,11 +3,19 @@ export const WORKS = [
     id: 1,
     title: "Veritas",
     device: "App",
-    icon: "./veritas.svg",
+    icon: "./veritas-icon.svg",
+    iconDark: "./veritas-icon-black.svg",
     description:
-      "App de noticias,  con el fin de englobar las noticias en un solo lugar.",
+      "Veritas es una red social <strong>especializada en noticias de primera mano</strong>, publicadas exclusivamente por <strong>cuentas verificadas</strong>. Permite explorar <strong>contenido confiable en tiempo real</strong>, con perfiles autenticados y una interfaz pensada para informarse de forma rápida y clara.",
     proyectFor: "Proyecto de la ORT",
-    technologies: ["react", "js", "mysql"],
+    technologies: [
+      "React Native",
+      "Javascript",
+      "Node",
+      "MySql",
+      "Figma",
+      "Illustrator",
+    ],
     category: "Aplicación mobile",
     year: 2025,
     academic: true,
@@ -21,26 +29,32 @@ export const WORKS = [
     ],
     browserPhotos: ["1mockupBrowser.png", "2mockupBrowser.png"],
     longDescription: `
-      <p><strong>Veritas</strong> es una red social <strong>especializada en noticias de primera mano</strong>, publicadas exclusivamente por cuentas verificadas.</p>
+      <p><strong>Veritas</strong> es una red social de <strong>noticias de primera mano</strong>, publicadas solo por cuentas verificadas.</p>
       <p>El proyecto se basa en <strong>dos tipos</strong> de usuarios:</p>
       <ul>
-        <li><strong>Regular user:</strong> personas que acceden a noticias confiables, organizadas por temas, autores o regiones.</li>
-        <li><strong>Content Creator:</strong> periodistas independientes, medios, organizaciones o comunicadores que compartan sus noticias de primera mano.</li>
+        <li><strong>Regular user:</strong> personas que acceden a noticias confiables en tiempo real.</li>
+        <li><strong>Content Creator:</strong> periodistas, medios y comunicadores que publican sus noticias de primera mano.</li>
       </ul>
     `,
     behance: "https://www.behance.net/gallery/236284691/Veritas-App",
     gitHub: "https://github.com/santiagoelautentico/App-Veritas",
     website: "",
+    videoWork: "veritasVideo.webm",
+    logo: "Veritas-LOGO.svg",
+    link: "https://veritas-ort.up.railway.app/",
   },
   {
     id: 2,
     title: "IronStone",
     device: "App",
-    icon: "./Ironstone.svg",
-    description:
-      "App de cryptomonedas, donde puedes vender, comprar y comprar tus transacciones",
+    icon: "./ironstone-icon.svg",
+    iconDark: "./ironstone-icon-black.svg",
+    description: `
+      <p><strong>Iron Stone</strong> es una app móvil de gestión de <strong>criptoactivos</strong>, que permite comprar, vender y monitorear tu portafolio en tiempo real.</p>
+      <p>Incluye un <strong>sistema de alertas inteligente</strong> que actúa como asesor manual, recomendando acciones de compra o venta según el comportamiento del mercado.</p>
+    `,
     proyectFor: "Proyecto de la ORT",
-    technologies: ["react"],
+    technologies: ["React Native", "Javascript"],
     category: "Aplicación mobile",
     year: 2024,
     academic: true,
@@ -52,16 +66,19 @@ export const WORKS = [
     behance: "",
     gitHub: "https://github.com/santiagoelautentico/ironStone-ReactNative",
     website: "",
+    videoWork: "ironStoneVideo.webm",
+    logo: "IronStone-LOGO.svg",
   },
   {
     id: 3,
     title: "Overview",
     device: "Web",
-    icon: "./overview.svg",
+    icon: "./overview-icon.svg",
+    iconDark: "./overview-icon-black.svg",
     description:
-      "App de noticias,  con el fin de englobar las noticias en un solo lugar.",
+      "Página web donde podés <strong>acceder rápidamente</strong> al catálogo completo de <strong>juegos free to play</strong>. Incluye navegación por <strong>categorías</strong>, <strong>buscador</strong> y <strong>fichas detalladas</strong> de cada título, pensada para una experiencia rápida, clara y prolija.",
     proyectFor: "Proyecto de la ORT",
-    technologies: ["HTML/CSS", "js"],
+    technologies: ["HTML/CSS", "Javascript"],
     category: "Página web",
     year: 2023,
     academic: true,
@@ -82,15 +99,21 @@ export const WORKS = [
       "https://www.behance.net/gallery/249059397/Overview-VideoGame-Website",
     gitHub: "https://github.com/santiagoelautentico/overview",
     website: "https://overview.up.railway.app/",
+    videoWork: "overviewVideo.webm",
+    logo: "Overview-LOGO.svg",
   },
   {
     id: 4,
     title: "DeliMiaw",
     device: "Web / Mobile",
-    icon: "./veritas.svg",
-    description: "Ecommerce de productos para gatos.",
+    icon: "./deli-icon.svg",
+    iconDark: "./deli-icon-black.svg",
+    description: `
+      <p><strong>DeliMiaw</strong> es un proyecto de diseño de interfaces para una <strong>tienda online de productos felinos</strong>.</p>
+      <p>Diseñé el <strong>flujo completo de compra</strong> —home, producto, carrito y checkout— tanto en <strong>mobile como en web</strong>, con una identidad visual propia que combina <strong>púrpura y amarillo</strong> con un estilo ilustrativo.</p>
+    `,
     proyectFor: "Proyecto de la ORT",
-    technologies: ["Figma", "Photoshop"],
+    technologies: ["Figma", "Photoshop", "Illustrator"],
     category: "UX / UI",
     year: 2024,
     academic: true,
@@ -108,16 +131,19 @@ La identidad visual mezcla púrpura vibrante con amarillo y un estilo ilustrativ
     behance: "",
     gitHub: "",
     website: "",
+    videoWork: "deliMiauVideop.webm",
+    logo: "DeliMiaw-LOGO.svg",
   },
   {
     id: 5,
     title: "Upper90",
     device: "Web",
-    icon: "./upper90.svg",
-    description:
-      "Página web donde ver resultados y estadisticas de tus equipos favoritos.",
+    icon: "./upper90-icon.svg",
+    iconDark: "./upper90-icon-black.svg",
+    description: `<p><strong>Upper90</strong> es una página web dedicada al <strong>mundo del fútbol</strong>, creada para aprender más sobre el desarrollo full stack, con base de datos propia en MySQL.</p>
+<p>Permite ver <strong>resultados de partidos, alineaciones, posiciones en liga, próximos partidos y estadísticas de jugadores</strong>, entre otras funcionalidades.</p>`,
     proyectFor: "Proyecto Personal",
-    technologies: ["react", "mysql"],
+    technologies: ["React Js", "MySql", "Figma"],
     category: "Página web",
     year: 2025,
     academic: false,
@@ -137,7 +163,9 @@ La identidad visual mezcla púrpura vibrante con amarillo y un estilo ilustrativ
       Puedes ver resultados de partidos, alineaciones, posiciones en liga, proximos partidos, estadisticas de jugadores y más.
     `,
     behance: "",
-    gitHub: "",
-    website: "",
+    gitHub: "https://github.com/santiagoelautentico/Upper90",
+    website: "https://upper90-production-065a.up.railway.app/",
+    videoWork: "compu3.webm",
+    logo: "Upper90-LOGO.svg",
   },
 ];
