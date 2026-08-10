@@ -1085,7 +1085,7 @@ body.show-all-works .all-works-section {
 @media (max-width: 768px) {
   .contact-article {
     width: 65%;
-    height: 65vh;
+    height: auto;
   }
   .title-box-contact {
     font-size: 1rem;
