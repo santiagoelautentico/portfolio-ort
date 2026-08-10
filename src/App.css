@@ -877,13 +877,12 @@ body.show-all-works .all-works-section {
     height: 100dvh;
     display: grid;
     flex-direction: column;
-    justify-content: space-between;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
   }
   .info-work-imagePhone {
     position: relative;
     right: 0;
-    width: 90%;
+    width: 75%;
     object-fit: contain;
   }
   .background-mockup {
@@ -937,7 +936,7 @@ body.show-all-works .all-works-section {
     display: grid;
     flex-direction: column;
     justify-content: space-between;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
   }
   .work-select-container-empty {
     height: auto;
