@@ -796,7 +796,7 @@ body.show-all-works .all-works-section {
   top: -1rem;
 }
 .info-work-imagePhone {
-  width: clamp(12rem, 30vw, 18rem);
+  width: clamp(12rem, 30vw, 23rem);
   object-fit: cover;
   position: absolute;
   right: 2rem;
@@ -927,7 +927,7 @@ body.show-all-works .all-works-section {
     height: auto;
   }
   .info-work-container-article{
-    height: 50dvh;
+    height: 55dvh;
   }
 }
 @media (max-width: 400px) {
