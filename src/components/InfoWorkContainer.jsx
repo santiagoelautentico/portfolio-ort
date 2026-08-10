@@ -6,8 +6,6 @@ export default function InfoWorkContainer({ works }) {
   const selectedWork = WORKS.find((item) => item.id === works?.id);
   const projectLink = selectedWork?.link || "#";
 
-  //
-
   return (
     <motion.article
       className="info-work-container-article"
@@ -66,8 +64,14 @@ export default function InfoWorkContainer({ works }) {
               muted
               playsInline
               className="info-work-imagePhone"
-              src={works?.videoWork || ""}
-            />
+            >
+              {works?.videoWorkMov && (
+                <source src={works.videoWorkMov} type="video/quicktime" />
+              )}
+              {works?.videoWork && (
+                <source src={works.videoWork} type="video/webm" />
+              )}
+            </video>
           ) : (
             <video
               autoPlay
@@ -75,8 +79,14 @@ export default function InfoWorkContainer({ works }) {
               muted
               playsInline
               className="info-work-image"
-              src={works?.videoWork || ""}
-            />
+            >
+              {works?.videoWorkMov && (
+                <source src={works.videoWorkMov} type="video/quicktime" />
+              )}
+              {works?.videoWork && (
+                <source src={works.videoWork} type="video/webm" />
+              )}
+            </video>
           )}
         </motion.div>
       </motion.div>
