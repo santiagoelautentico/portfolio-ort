@@ -40,7 +40,6 @@ export const WORKS = [
     gitHub: "https://github.com/santiagoelautentico/App-Veritas",
     website: "",
     videoWork: "veritasVideo.webm",
-    videoWorkMov: "veritasVideo_prores_light.mov",
     logo: "Veritas-LOGO.svg",
     link: "https://veritas-ort.up.railway.app/",
   },
@@ -68,7 +67,6 @@ export const WORKS = [
     gitHub: "https://github.com/santiagoelautentico/ironStone-ReactNative",
     website: "",
     videoWork: "ironStoneVideo.webm",
-    videoWorkMov: "ironStoneVideo.mov",
     logo: "IronStone-LOGO.svg",
   },
   {
@@ -102,7 +100,6 @@ export const WORKS = [
     gitHub: "https://github.com/santiagoelautentico/overview",
     website: "https://overview.up.railway.app/",
     videoWork: "overviewVideo.webm",
-    videoWorkMov: "overviewVideo.mov",
     logo: "Overview-LOGO.svg",
   },
   {
@@ -135,7 +132,6 @@ La identidad visual mezcla púrpura vibrante con amarillo y un estilo ilustrativ
     gitHub: "",
     website: "",
     videoWork: "deliMiauVideop.webm",
-    videoWorkMov: "deliMiauVideop.mov",
     logo: "DeliMiaw-LOGO.svg",
   },
   {
@@ -170,7 +166,6 @@ La identidad visual mezcla púrpura vibrante con amarillo y un estilo ilustrativ
     gitHub: "https://github.com/santiagoelautentico/Upper90",
     website: "https://upper90-production-065a.up.railway.app/",
     videoWork: "compu3.webm",
-    videoWorkMov: "compu3.mov",
     logo: "Upper90-LOGO.svg",
   },
 ];

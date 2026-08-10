@@ -2,13 +2,24 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { WORKS } from "../works.js";
 
+const isIOSDevice =
+  typeof navigator !== "undefined" &&
+  /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+  !window.MSStream;
+
+const isSafariBrowser =
+  typeof navigator !== "undefined" &&
+  /^((?!chrome|android|crios|fxios|edgios).)*safari/i.test(navigator.userAgent);
+
+const isIOS = isIOSDevice || isSafariBrowser;
+
 export default function InfoWorkContainer({ works }) {
   const selectedWork = WORKS.find((item) => item.id === works?.id);
   const projectLink = selectedWork?.link || "#";
 
   return (
     <motion.article
-      className="info-work-container-article"
+      className={`info-work-container-article ${isIOS ? "is-ios" : ""}`}
       style={{ marginInline: "auto", overflowX: "hidden" }}
       initial={{ width: "0%" }}
       animate={{ width: "100%" }}
@@ -64,14 +75,8 @@ export default function InfoWorkContainer({ works }) {
               muted
               playsInline
               className="info-work-imagePhone"
-            >
-              {works?.videoWorkMov && (
-                <source src={works.videoWorkMov} type="video/quicktime" />
-              )}
-              {works?.videoWork && (
-                <source src={works.videoWork} type="video/webm" />
-              )}
-            </video>
+              src={works?.videoWork || ""}
+            />
           ) : (
             <video
               autoPlay
@@ -79,14 +84,8 @@ export default function InfoWorkContainer({ works }) {
               muted
               playsInline
               className="info-work-image"
-            >
-              {works?.videoWorkMov && (
-                <source src={works.videoWorkMov} type="video/quicktime" />
-              )}
-              {works?.videoWork && (
-                <source src={works.videoWork} type="video/webm" />
-              )}
-            </video>
+              src={works?.videoWork || ""}
+            />
           )}
         </motion.div>
       </motion.div>
