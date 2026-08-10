@@ -38,11 +38,23 @@ export default function BoxContact({ mail, behance, linkedin }) {
       <div>
         <div className="icon-box-contact">
           {linkedin ? (
-            <FaLinkedin size={32} color="#F9CA0B" />
+            !isMobile ? (
+              <FaLinkedin size={32} color="#F9CA0B" />
+            ) : (
+              <FaLinkedin size={16} color="#F9CA0B" />
+            )
           ) : behance ? (
-            <FaBehanceSquare size={32} color="#F9CA0B" />
+            !isMobile ? (
+              <FaBehanceSquare size={32} color="#F9CA0B" />
+            ) : (
+              <FaBehanceSquare size={16} color="#F9CA0B" />
+            )
           ) : mail ? (
-            <SiGmail size={32} color="#F9CA0B" />
+            !isMobile ? (
+              <SiGmail size={32} color="#F9CA0B" />
+            ) : (
+              <SiGmail size={16} color="#F9CA0B" />
+            )
           ) : null}
         </div>
       </div>

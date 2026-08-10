@@ -870,9 +870,15 @@ body.show-all-works .all-works-section {
 .info-work-inner-content {
   overflow: hidden;
 }
+
 @media (max-width: 768px) {
   .work-container {
     padding-inline: 1rem;
+    height: 100vh;
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-rows: 70vh 40vh;
   }
   .info-work-imagePhone {
     position: relative;
@@ -918,7 +924,19 @@ body.show-all-works .all-works-section {
     overflow-x: auto;
   }
 }
-
+@media (max-width: 400px) {
+  .work-container {
+    padding-inline: 1rem;
+    height: 100vh;
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-rows: 60vh 40vh;
+  }
+  .info-work-container-article{
+    height: auto;
+  }
+}
 .phone-photos-ul > li:last-child {
   margin-right: 6rem;
 }
@@ -1069,7 +1087,14 @@ body.show-all-works .all-works-section {
     gap: 0;
   }
   .contact-content {
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+  .icon-box-contact {
+    padding: .6rem;
+  }
+  .contact-title > h2{
+      -webkit-text-stroke: 2px black;
+
   }
   /* .img-container-contact{
   height: 9rem;
@@ -1121,17 +1146,17 @@ body.show-all-works .all-works-section {
     rgba(148, 118, 0, 0.2)
   );
 }
-.title-box-contact > p{
-  font-family: 'clash-display-bold';
+.title-box-contact > p {
+  font-family: "clash-display-bold";
   font-size: 1.2rem;
 }
-.tag-tec{
+.tag-tec {
   padding: 0.5rem;
   background-color: #202020;
   border-radius: 8px;
   border: 1px solid var(--border-color);
 }
-.technologies-container{
+.technologies-container {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
