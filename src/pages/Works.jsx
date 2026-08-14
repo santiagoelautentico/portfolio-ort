@@ -21,7 +21,9 @@ export default function Works() {
           {selectedId != null ? (
             <InfoWorkContainer works={WORKS.find((w) => w.id === selectedId)} />
           ) : (
-            <p>selecciona paquete</p>
+            <h1 className="title-works-select">
+              Conoce mis proyectos!
+            </h1>
           )}
         </motion.article>
       </AnimatePresence>

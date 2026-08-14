@@ -1178,6 +1178,9 @@ body.show-all-works .all-works-section {
 .article-infoWork {
   padding-inline: 12%;
   padding-block: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-contentWork {
   background-color: #8747f0;
