@@ -1327,7 +1327,7 @@ body.show-all-works .all-works-section {
   display: flex;
 }
 .container-infoContainer-Ios-phone {
-  background-image: linear-gradient(90deg, #0e0e0e2f 0%, #0e0e0e 50%);
+  background-color: #0e0e0e;
   box-shadow:
     -4px -4px 10px 0 rgba(255, 255, 255, 0.1) inset,
     4px 4px 10px 0 rgba(255, 255, 255, 0.1) inset,
