@@ -9,24 +9,22 @@ export default function Works() {
 
   return (
     <section className="container-works">
-      <AnimatePresence mode="wait">
-        <motion.article
-          key={selectedId ?? "empty"}
-          className="article-infoWork"
-          initial={{ clipPath: "inset(0% 50% 0% 50%)" }}
-          animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
-          exit={{ clipPath: "inset(0% 50% 0% 50%)" }}
-          transition={{ duration: 0.45, ease: "easeOut" }}
-        >
-          {selectedId != null ? (
+      {selectedId ? (
+        <AnimatePresence mode="wait">
+          <motion.article
+            key={selectedId ?? "empty"}
+            className="article-infoWork"
+            initial={{ clipPath: "inset(0% 50% 0% 50%)" }}
+            animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
+            exit={{ clipPath: "inset(0% 50% 0% 50%)" }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+          >
             <InfoWorkContainer works={WORKS.find((w) => w.id === selectedId)} />
-          ) : (
-            <h1 className="title-works-select">
-              Conoce mis proyectos!
-            </h1>
-          )}
-        </motion.article>
-      </AnimatePresence>
+          </motion.article>
+        </AnimatePresence>
+      ) : (
+        <h1 className="title-works-select">Conoce mis proyectos!</h1>
+      )}
       <article className="work2">
         {WORKS.map((works) => (
           <SelectWorkCard
