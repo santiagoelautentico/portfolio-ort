@@ -1214,7 +1214,7 @@ body.show-all-works .all-works-section {
   overflow: hidden;
 }
 .container-infoContainer-Ios {
-  background-image: linear-gradient(90deg, #0e0e0e2f 0%, #0E0E0E 50%);
+  background-image: linear-gradient(90deg, #0e0e0e2f 0%, #0e0e0e 50%);
   border-radius: 25px;
   border: 1px solid var(--primary-color);
   height: stretch;
@@ -1302,7 +1302,8 @@ body.show-all-works .all-works-section {
   }
 }
 @media (max-width: 1100px) and (min-width: 800px) {
-  .container-infoContainer,  .container-infoContainer-Ios{
+  .container-infoContainer,
+  .container-infoContainer-Ios {
     grid-template-columns: 55% 45%;
   }
 }
@@ -1312,6 +1313,21 @@ body.show-all-works .all-works-section {
     rgba(0, 0, 0, 0.1) 0%,
     rgba(249, 202, 11, 0.1) 100%
   );
+  box-shadow:
+    -4px -4px 10px 0 rgba(255, 255, 255, 0.1) inset,
+    4px 4px 10px 0 rgba(255, 255, 255, 0.1) inset,
+    0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2.5px);
+  border-radius: 25px;
+  border: 1px solid var(--primary-color);
+  height: stretch;
+  border-radius: 20px;
+  will-change: clip-path;
+  overflow: hidden;
+  display: flex;
+}
+.container-infoContainer-Ios-phone {
+  background-image: linear-gradient(90deg, #0e0e0e2f 0%, #0e0e0e 50%);
   box-shadow:
     -4px -4px 10px 0 rgba(255, 255, 255, 0.1) inset,
     4px 4px 10px 0 rgba(255, 255, 255, 0.1) inset,

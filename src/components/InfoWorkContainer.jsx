@@ -120,7 +120,7 @@ export default function InfoWorkContainer({ works }) {
             ? "container-infoContainer-phone"
             : isIOS && !isMobile
               ? "container-infoContainer-Ios"
-              : "container-infoContainer-phone"
+              : "container-infoContainer-Ios-phone"
       }
     >
       {!isMobile ? (
