@@ -788,7 +788,7 @@ body.show-all-works .all-works-section {
   );
 }
 .info-work-image {
-  width: clamp(300px, 85%, 1200px);
+  width: clamp(250px, 75%, 1200px);
 }
 .info-work-imagePhone {
   width: clamp(12rem, 45vw, 18rem);
