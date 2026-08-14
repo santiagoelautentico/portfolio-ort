@@ -8,14 +8,7 @@ export const WORKS = [
     description:
       "Veritas es una red social <strong>especializada en noticias de primera mano</strong>, publicadas exclusivamente por <strong>cuentas verificadas</strong>. Permite explorar <strong>contenido confiable en tiempo real</strong>, con perfiles autenticados y una interfaz pensada para informarse de forma rápida y clara.",
     proyectFor: "Proyecto de la ORT",
-    technologies: [
-      "React Native",
-      "Javascript",
-      "Node",
-      "MySql",
-      "Figma",
-      "Illustrator",
-    ],
+    technologies: ["React Native", "Javascript", "Node", "MySql"],
     category: "Aplicación mobile",
     year: 2025,
     academic: true,
@@ -50,8 +43,8 @@ export const WORKS = [
     icon: "./ironstone-icon.svg",
     iconDark: "./ironstone-icon-black.svg",
     description: `
-      <p><strong>Iron Stone</strong> es una app móvil de gestión de <strong>criptoactivos</strong>, que permite comprar, vender y monitorear tu portafolio en tiempo real.</p>
-      <p>Incluye un <strong>sistema de alertas inteligente</strong> que actúa como asesor manual, recomendando acciones de compra o venta según el comportamiento del mercado.</p>
+      <strong>Iron Stone</strong> es una app móvil de gestión de <strong>criptoactivos</strong>, que permite comprar, vender y monitorear tu portafolio en tiempo real.
+      Incluye un <strong>sistema de alertas inteligente</strong> que actúa como asesor manual, recomendando acciones de compra o venta según el comportamiento del mercado.
     `,
     proyectFor: "Proyecto de la ORT",
     technologies: ["React Native", "Javascript"],
@@ -67,7 +60,7 @@ export const WORKS = [
     gitHub: "https://github.com/santiagoelautentico/ironStone-ReactNative",
     website: "",
     videoWork: "ironStoneVideo.webm",
-    logo: "IronStone-LOGO.svg",
+    logo: "ironstoneLOGO.svg",
   },
   {
     id: 3,
@@ -99,8 +92,9 @@ export const WORKS = [
       "https://www.behance.net/gallery/249059397/Overview-VideoGame-Website",
     gitHub: "https://github.com/santiagoelautentico/overview",
     website: "https://overview.up.railway.app/",
-    videoWork: "overviewVideo.webm",
+    videoWork: "overviewCompuVideo.webm",
     logo: "Overview-LOGO.svg",
+    boxSelect: "iconOverviewSelect.svg",
   },
   {
     id: 4,
@@ -109,8 +103,8 @@ export const WORKS = [
     icon: "./deli-icon.svg",
     iconDark: "./deli-icon-black.svg",
     description: `
-      <p><strong>DeliMiaw</strong> es un proyecto de diseño de interfaces para una <strong>tienda online de productos felinos</strong>.</p>
-      <p>Diseñé el <strong>flujo completo de compra</strong> —home, producto, carrito y checkout— tanto en <strong>mobile como en web</strong>, con una identidad visual propia que combina <strong>púrpura y amarillo</strong> con un estilo ilustrativo.</p>
+      <strong>DeliMiaw</strong> es un proyecto de diseño de interfaces para una <strong>tienda online de productos felinos</strong>.
+      Diseñé el <strong>flujo completo de compra</strong> —home, producto, carrito y checkout— tanto en <strong>mobile como en web</strong>, con una identidad visual propia que combina <strong>púrpura y amarillo</strong> con un estilo ilustrativo.
     `,
     proyectFor: "Proyecto de la ORT",
     technologies: ["Figma", "Photoshop", "Illustrator"],
@@ -131,7 +125,7 @@ La identidad visual mezcla púrpura vibrante con amarillo y un estilo ilustrativ
     behance: "",
     gitHub: "",
     website: "",
-    videoWork: "deliMiauVideop.webm",
+    videoWork: "delimiawCompuVideo.webm",
     logo: "DeliMiaw-LOGO.svg",
   },
   {
@@ -140,8 +134,8 @@ La identidad visual mezcla púrpura vibrante con amarillo y un estilo ilustrativ
     device: "Web",
     icon: "./upper90-icon.svg",
     iconDark: "./upper90-icon-black.svg",
-    description: `<p><strong>Upper90</strong> es una página web dedicada al <strong>mundo del fútbol</strong>, creada para aprender más sobre el desarrollo full stack, con base de datos propia en MySQL.</p>
-<p>Permite ver <strong>resultados de partidos, alineaciones, posiciones en liga, próximos partidos y estadísticas de jugadores</strong>, entre otras funcionalidades.</p>`,
+    description: `<strong>Upper90</strong> es una página web dedicada al <strong>mundo del fútbol</strong>, creada para aprender más sobre el desarrollo full stack, con base de datos propia en MySQL.
+Permite ver <strong>resultados de partidos, alineaciones, posiciones en liga, próximos partidos y estadísticas de jugadores</strong>, entre otras funcionalidades.`,
     proyectFor: "Proyecto Personal",
     technologies: ["React Js", "MySql", "Figma"],
     category: "Página web",
@@ -165,7 +159,7 @@ La identidad visual mezcla púrpura vibrante con amarillo y un estilo ilustrativ
     behance: "",
     gitHub: "https://github.com/santiagoelautentico/Upper90",
     website: "https://upper90-production-065a.up.railway.app/",
-    videoWork: "compu3.webm",
+    videoWork: "upper90CompuVideo.webm",
     logo: "Upper90-LOGO.svg",
   },
 ];

@@ -1,28 +1,31 @@
-import { WORKS } from "../works.js";
-import SelectWorkCard from "../components/SelectWorkCard.jsx";
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import InfoWorkContainer from "../components/InfoWorkContainer.jsx";
-import { AnimatePresence } from "motion/react"; // 👈 1. nuevo import
+import SelectWorkCard from "../components/SelectWorkCard.jsx";
+import { WORKS } from "../works.js";
+import { useState } from "react";
 
 export default function Works() {
   const [selectedId, setSelectedId] = useState(null);
 
   return (
-    <section className="work-container">
+    <section className="container-works">
       <AnimatePresence mode="wait">
-        {selectedId != null ? (
-          <InfoWorkContainer
-            key={selectedId}
-            works={WORKS.find((w) => w.id === selectedId)}
-          />
-        ) : (
-          <div key="empty" className="work-select-container-empty"> 
-            <p>Selecciona un proyecto para ver más información</p>
-          </div>
-        )}
+        <motion.article
+          key={selectedId ?? "empty"}
+          className="article-infoWork"
+          initial={{ clipPath: "inset(0% 50% 0% 50%)" }}
+          animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
+          exit={{ clipPath: "inset(0% 50% 0% 50%)" }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+        >
+          {selectedId != null ? (
+            <InfoWorkContainer works={WORKS.find((w) => w.id === selectedId)} />
+          ) : (
+            <p>selecciona paquete</p>
+          )}
+        </motion.article>
       </AnimatePresence>
-
-      <article className="work-select-container">
+      <article className="work2">
         {WORKS.map((works) => (
           <SelectWorkCard
             key={works.id}
