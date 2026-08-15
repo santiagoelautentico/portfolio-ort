@@ -36,7 +36,7 @@ export default function Modelo3D() {
   return (
     <Canvas
       style={{ width: "100vw", height: "100vh" }}
-      camera={{ position: [0, 0, isMobile ? 8 : 5], fov: 60 }}
+      camera={{ position: [0, 0, isMobile ? 10 : 5], fov: 60 }}
     >
       <ambientLight intensity={1.5} />
       <directionalLight position={[2, 2, 2]} intensity={0.5} />
