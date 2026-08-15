@@ -92,7 +92,7 @@ export const WORKS = [
       "https://www.behance.net/gallery/249059397/Overview-VideoGame-Website",
     gitHub: "https://github.com/santiagoelautentico/overview",
     website: "https://overview.up.railway.app/",
-    videoWork: "overviewCompuVideo.webm",
+    videoWork: "overviewVideo.webm",
     logo: "Overview-LOGO.svg",
     boxSelect: "iconOverviewSelect.svg",
   },

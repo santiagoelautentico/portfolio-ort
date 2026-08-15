@@ -1,7 +1,7 @@
 import Model from '../components/Model.jsx';
 export default function Home() {
   return (
-    <section>
+    <section className='section-home'>
       <Model />
     </section>
   );

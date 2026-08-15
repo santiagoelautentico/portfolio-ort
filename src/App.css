@@ -1061,11 +1061,10 @@ body.show-all-works .all-works-section {
   background-color: #383838;
 }
 .icon-box-contact {
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 8px;
   border: 2px solid var(--border-color);
   background-color: #383838;
@@ -1345,4 +1344,8 @@ body.show-all-works .all-works-section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.section-home{
+  height: 96dvh;
+  overflow: hidden;
 }

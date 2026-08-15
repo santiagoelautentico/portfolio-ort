@@ -28,6 +28,18 @@ a {
   --desktop: 1280px;
 }
 
+::-webkit-scrollbar {
+  opacity: 0;
+}
+/* ::-webkit-scrollbar-track{
+  padding-block: 10em;
+} */
+
+::-webkit-scrollbar-track {
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
 @font-face {
   font-family: "yaperi";
   src: url("./assets/fonts/Yapari-Variable-Trial-VF.ttf") format("truetype");
@@ -83,9 +95,9 @@ hr {
   width: 100%;
   border: 1px solid var(--border-color);
 }
-p{
+p {
   margin: 0;
 }
-strong{
+strong {
   font-family: "clash-display-bold";
 }
